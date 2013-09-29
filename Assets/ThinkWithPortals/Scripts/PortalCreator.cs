@@ -14,13 +14,13 @@ public class PortalCreator : MonoBehaviour {
 			
 			if( portal == null ) {
 				// create new portal if we didn't find one
-				GameObject handle = Instantiate(portalPrefab, transform.position, collision.transform.rotation * Quaternion.AngleAxis(90f, new Vector3(1,0,0)) ) as GameObject;
+				GameObject handle = Instantiate(portalPrefab, collision.transform.position - collision.transform.forward * 0.01f, collision.transform.rotation * Quaternion.AngleAxis(90f, new Vector3(1,0,0)) ) as GameObject;
 				// get rid of the "(clone)" name extension
 				handle.name = portalPrefab.name;
 			} else {
 				// move exiting portal to new position
-				portal.transform.position = transform.position;
-				portal.transform.rotation = collision.transform.rotation * Quaternion.AngleAxis(90f, new Vector3(1,0,0));
+				portal.transform.position = collision.transform.position - collision.transform.forward * 0.01f;
+				portal.transform.rotation = collision.transform.rotation;// * Quaternion.AngleAxis(90f, new Vector3(1,0,0));
 			}
 		}
 		
