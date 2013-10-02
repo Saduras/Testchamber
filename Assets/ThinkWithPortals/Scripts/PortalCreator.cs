@@ -17,10 +17,12 @@ public class PortalCreator : MonoBehaviour {
 				GameObject handle = Instantiate(portalPrefab, collision.transform.position - collision.transform.forward * 0.01f, collision.transform.rotation * Quaternion.AngleAxis(90f, new Vector3(1,0,0)) ) as GameObject;
 				// get rid of the "(clone)" name extension
 				handle.name = portalPrefab.name;
+				handle.GetComponent<PortalWall>().SetParent( collision.gameObject );
 			} else {
 				// move exiting portal to new position
 				portal.transform.position = collision.transform.position - collision.transform.forward * 0.01f;
-				portal.transform.rotation = collision.transform.rotation;// * Quaternion.AngleAxis(90f, new Vector3(1,0,0));
+				portal.transform.rotation = collision.transform.rotation;
+				portal.GetComponent<PortalWall>().SetParent( collision.gameObject );
 			}
 		}
 		
