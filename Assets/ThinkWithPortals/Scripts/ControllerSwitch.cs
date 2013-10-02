@@ -79,4 +79,17 @@ public class ControllerSwitch : MonoBehaviour {
 			}
 		}
 	}
+	
+	/**
+	 * Switch to other clone
+	 */
+	public void Switch() {
+		int clone = active == 0 ? 1 : 0;
+		
+		playerController[active].Change(false);
+		playerController[clone].Change(true);
+		//playerController[clone].GetComponent<CharacterController>().veclocity =  playerController[active].GetComponent<CharacterController>().velocity;
+		
+		active = clone;
+	}
 }

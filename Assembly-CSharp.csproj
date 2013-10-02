@@ -50,6 +50,7 @@
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCanon.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCreator.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalWall.cs" />
+     <Compile Include="Assets\ThinkWithPortals\Scripts\TeleportTrigger.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
