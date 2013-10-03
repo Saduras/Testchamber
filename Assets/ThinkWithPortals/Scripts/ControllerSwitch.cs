@@ -88,8 +88,11 @@ public class ControllerSwitch : MonoBehaviour {
 		
 		playerController[active].Change(false);
 		playerController[clone].Change(true);
-		//playerController[clone].GetComponent<CharacterController>().veclocity =  playerController[active].GetComponent<CharacterController>().velocity;
-		
+		Vector3 move = playerController[clone].transform.forward;
+		playerController[clone].GetComponent<CharacterController>().Move( move );
+		//playerController[clone].GetComponent<Rigidbody>().AddForce(playerController[active].GetComponent<CharacterController>().velocity,ForceMode.Impulse);
+		//Debug.DrawLine(playerController[clone].transform.position, playerController[clone].transform.position + playerController[active].GetComponent<CharacterController>().velocity);
+		//Debug.Break();
 		active = clone;
 	}
 }

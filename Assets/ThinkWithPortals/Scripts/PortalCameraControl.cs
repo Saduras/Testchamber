@@ -15,12 +15,12 @@ public class PortalCameraControl : MonoBehaviour {
 	void Update () {
 		// use offset of main camera to other portal to place this portal view camera
 		Vector3 posOffset = otherPortal.transform.InverseTransformPoint( Camera.main.transform.position );
-		
-		transform.localPosition =  - posOffset;
+		Vector3 localPos = new Vector3( - posOffset.x, posOffset.y, - posOffset.z);
+		//transform.localPosition =  - posOffset;
 		Debug.DrawLine( transform.parent.position, transform.position );
 		Debug.DrawLine( otherPortal.transform.position, otherPortal.transform.TransformPoint( posOffset )  );
 		
-		camera.nearClipPlane = posOffset.magnitude;
+		//camera.nearClipPlane = posOffset.magnitude;
 		
 		Quaternion rotOffset = otherPortal.transform.rotation;
 		Quaternion rotCorrection = Quaternion.AngleAxis(180f, new Vector3(0,1,0));
