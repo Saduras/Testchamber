@@ -44,13 +44,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Tests\MirrorReflection.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\CloneControl.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\ControllerSwitch.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCameraControl.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCanon.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCreator.cs" />
+     <Compile Include="Assets\ThinkWithPortals\Scripts\PortalViewRender.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalWall.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\TeleportTrigger.cs" />
+     <None Include="Assets\Tests\Mirror.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
