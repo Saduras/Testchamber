@@ -44,9 +44,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PortalView.cs" />
      <Compile Include="Assets\Tests\MirrorReflection.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\CloneControl.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\ControllerSwitch.cs" />
+     <Compile Include="Assets\ThinkWithPortals\Scripts\MainCam.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCameraControl.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCanon.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalCreator.cs" />
@@ -54,10 +56,15 @@
      <Compile Include="Assets\ThinkWithPortals\Scripts\PortalWall.cs" />
      <Compile Include="Assets\ThinkWithPortals\Scripts\TeleportTrigger.cs" />
      <None Include="Assets\Tests\Mirror.shader" />
+     <None Include="Assets\Tests\TransparentPortal.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

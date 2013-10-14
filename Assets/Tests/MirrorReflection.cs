@@ -26,6 +26,7 @@ public class MirrorReflection : MonoBehaviour
     // camera will just work!
     public void OnWillRenderObject()
     {
+		Debug.Log("Mirror Render Start " + gameObject.GetInstanceID());
         if( !enabled || !renderer || !renderer.sharedMaterial || !renderer.enabled )
             return;
  
@@ -68,7 +69,7 @@ public class MirrorReflection : MonoBehaviour
         Vector4 clipPlane = CameraSpacePlane( reflectionCamera, pos, normal, 1.0f );
         Matrix4x4 projection = cam.projectionMatrix;
         CalculateObliqueMatrix (ref projection, clipPlane);
-        //reflectionCamera.projectionMatrix = projection;
+        reflectionCamera.projectionMatrix = projection;
  
         // reflectionCamera.cullingMask = ~(1<<4) & m_ReflectLayers.value; // never render water layer
         reflectionCamera.targetTexture = m_ReflectionTexture;
@@ -101,6 +102,7 @@ public class MirrorReflection : MonoBehaviour
             QualitySettings.pixelLightCount = oldPixelLightCount;
  
         s_InsideRendering = false;
+		Debug.Log("Mirror Render End " + gameObject.GetInstanceID());
     }
  
  
